@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffordableInterior.CMS.Web", "AffordableInterior.CMS.Web\AffordableInterior.CMS.Web.csproj", "{F4F7EEB0-F17E-4434-BBF7-239016FB7F59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96810C64-BD10-420B-BC8A-0B33040A5ABC} = {96810C64-BD10-420B-BC8A-0B33040A5ABC}
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9} = {5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}
+		{D68F6EDB-4176-416F-B894-979B10E36F4F} = {D68F6EDB-4176-416F-B894-979B10E36F4F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoySol.CMS.ContentServices", "RoySol.CMS.ContentServices\RoySol.CMS.ContentServices.csproj", "{D68F6EDB-4176-416F-B894-979B10E36F4F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96810C64-BD10-420B-BC8A-0B33040A5ABC} = {96810C64-BD10-420B-BC8A-0B33040A5ABC}
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9} = {5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoySol.CMS.ContentServices.Contracts", "RoySol.CMS.ContentServices.Contracts\RoySol.CMS.ContentServices.Contracts.csproj", "{96810C64-BD10-420B-BC8A-0B33040A5ABC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9} = {5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoySol.CMS.Models", "RoySol.CMS.Models\RoySol.CMS.Models.csproj", "{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoySol.Logger", "RoySol.Logger\RoySol.Logger.csproj", "{73C73510-0012-4251-BF00-582667647F11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F7EEB0-F17E-4434-BBF7-239016FB7F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F7EEB0-F17E-4434-BBF7-239016FB7F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F7EEB0-F17E-4434-BBF7-239016FB7F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F7EEB0-F17E-4434-BBF7-239016FB7F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68F6EDB-4176-416F-B894-979B10E36F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68F6EDB-4176-416F-B894-979B10E36F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68F6EDB-4176-416F-B894-979B10E36F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68F6EDB-4176-416F-B894-979B10E36F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96810C64-BD10-420B-BC8A-0B33040A5ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96810C64-BD10-420B-BC8A-0B33040A5ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96810C64-BD10-420B-BC8A-0B33040A5ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96810C64-BD10-420B-BC8A-0B33040A5ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F15B1D1-B50A-49C1-AE8D-3D2131DDF8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C73510-0012-4251-BF00-582667647F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C73510-0012-4251-BF00-582667647F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C73510-0012-4251-BF00-582667647F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C73510-0012-4251-BF00-582667647F11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

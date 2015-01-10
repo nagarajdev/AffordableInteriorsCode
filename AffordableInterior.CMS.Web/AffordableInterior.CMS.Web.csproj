@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4F7EEB0-F17E-4434-BBF7-239016FB7F59}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AffordableInterior.CMS.Web</RootNamespace>
+    <AssemblyName>AffordableInterior.CMS.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Libraries\External\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\Libraries\External\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper">
+      <HintPath>..\Libraries\External\Glass.Mapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Umb">
+      <HintPath>..\Libraries\External\Glass.Mapper.Umb.dll</HintPath>
+    </Reference>
+    <Reference Include="Glass.Mapper.Umb.CastleWindsor">
+      <HintPath>..\Libraries\External\Glass.Mapper.Umb.CastleWindsor.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\External\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\External\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RoySol.CMS.ContentServices">
+      <HintPath>..\RoySol.CMS.ContentServices\bin\Debug\RoySol.CMS.ContentServices.dll</HintPath>
+    </Reference>
+    <Reference Include="RoySol.CMS.ContentServices.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RoySol.CMS.ContentServices.Contracts\bin\Debug\RoySol.CMS.ContentServices.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="RoySol.CMS.Models">
+      <HintPath>..\RoySol.CMS.Models\bin\Debug\RoySol.CMS.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="umbraco, Version=1.0.5350.25719, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RoySol.CMS.ContentServices\bin\Debug\umbraco.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Core, Version=1.0.5350.25714, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RoySol.CMS.ContentServices\bin\Debug\Umbraco.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Umbraco.Web.UI, Version=1.0.5350.25722, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RoySol.CMS.ContentServices\bin\Debug\Umbraco.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\External\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\GlassMapperUmb.cs" />
+    <Compile Include="App_Start\GlassMapperUmbCustom.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="medialibrary\css\animate.min.css" />
+    <Content Include="medialibrary\css\bootstrap.min.css" />
+    <Content Include="medialibrary\css\font-awesome.css" />
+    <Content Include="medialibrary\css\font-awesome.min.css" />
+    <Content Include="medialibrary\css\main.css" />
+    <Content Include="medialibrary\css\prettyPhoto.css" />
+    <Content Include="medialibrary\css\responsive.css" />
+    <Content Include="medialibrary\css\shop-homepage.css" />
+    <Content Include="medialibrary\css\shop-item.css" />
+    <Content Include="medialibrary\images\accordion1.png" />
+    <Content Include="medialibrary\images\ads\ad1.png" />
+    <Content Include="medialibrary\images\ads\ad2.png" />
+    <Content Include="medialibrary\images\ads\ad3.png" />
+    <Content Include="medialibrary\images\ads\ad4.png" />
+    <Content Include="medialibrary\images\blog\avatar.jpg" />
+    <Content Include="medialibrary\images\blog\avatar1.png" />
+    <Content Include="medialibrary\images\blog\avatar2.png" />
+    <Content Include="medialibrary\images\blog\avatar3.png" />
+    <Content Include="medialibrary\images\blog\blog1.jpg" />
+    <Content Include="medialibrary\images\blog\blog2.jpg" />
+    <Content Include="medialibrary\images\blog\boy.png" />
+    <Content Include="medialibrary\images\blog\boy2.png" />
+    <Content Include="medialibrary\images\blog\boy3.png" />
+    <Content Include="medialibrary\images\blog\comments_bg.png" />
+    <Content Include="medialibrary\images\blog\gallery1.png" />
+    <Content Include="medialibrary\images\blog\gallery2.png" />
+    <Content Include="medialibrary\images\blog\gallery3.png" />
+    <Content Include="medialibrary\images\blog\gallery4.png" />
+    <Content Include="medialibrary\images\blog\gallery5.png" />
+    <Content Include="medialibrary\images\blog\gallery6.png" />
+    <Content Include="medialibrary\images\blog\girl.png" />
+    <Content Include="medialibrary\images\blog\thumb1.jpg" />
+    <Content Include="medialibrary\images\blog\thumb2.jpg" />
+    <Content Include="medialibrary\images\blog\thumb3.jpg" />
+    <Content Include="medialibrary\images\client1.png" />
+    <Content Include="medialibrary\images\client2.png" />
+    <Content Include="medialibrary\images\client3.png" />
+    <Content Include="medialibrary\images\contact.png" />
+    <Content Include="medialibrary\images\emailus\E-mail-icon.jpg" />
+    <Content Include="medialibrary\images\gallery\gallery1.jpg" />
+    <Content Include="medialibrary\images\gallery\gallery2.jpg" />
+    <Content Include="medialibrary\images\gallery\gallery3.jpg" />
+    <Content Include="medialibrary\images\gallery\gallery4.jpg" />
+    <Content Include="medialibrary\images\gallery\gallery5.jpg" />
+    <Content Include="medialibrary\images\gallery\gallery6.jpg" />
+    <Content Include="medialibrary\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="medialibrary\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="medialibrary\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="medialibrary\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="medialibrary\images\ico\favicon.ico" />
+    <Content Include="medialibrary\images\ico\zoom_plus.png" />
+    <Content Include="medialibrary\images\image_bg.png" />
+    <Content Include="medialibrary\images\logo .png" />
+    <Content Include="medialibrary\images\logo.png" />
+    <Content Include="medialibrary\images\man1.jpg" />
+    <Content Include="medialibrary\images\man2.jpg" />
+    <Content Include="medialibrary\images\man3.jpg" />
+    <Content Include="medialibrary\images\man4.jpg" />
+    <Content Include="medialibrary\images\map.jpg" />
+    <Content Include="medialibrary\images\partners\partner1.png" />
+    <Content Include="medialibrary\images\partners\partner2.png" />
+    <Content Include="medialibrary\images\partners\partner3.png" />
+    <Content Include="medialibrary\images\partners\partner4.png" />
+    <Content Include="medialibrary\images\partners\partner5.png" />
+    <Content Include="medialibrary\images\partners\partner_bg.png" />
+    <Content Include="medialibrary\images\portfolio\full\item1.png" />
+    <Content Include="medialibrary\images\portfolio\full\item10.png" />
+    <Content Include="medialibrary\images\portfolio\full\item11.png" />
+    <Content Include="medialibrary\images\portfolio\full\item12.png" />
+    <Content Include="medialibrary\images\portfolio\full\item2.png" />
+    <Content Include="medialibrary\images\portfolio\full\item3.png" />
+    <Content Include="medialibrary\images\portfolio\full\item4.png" />
+    <Content Include="medialibrary\images\portfolio\full\item5.png" />
+    <Content Include="medialibrary\images\portfolio\full\item6.png" />
+    <Content Include="medialibrary\images\portfolio\full\item7.png" />
+    <Content Include="medialibrary\images\portfolio\full\item8.png" />
+    <Content Include="medialibrary\images\portfolio\full\item9.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item1.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item10.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item11.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item12.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item2.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item3.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item4.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item5.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item6.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item7.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item8.png" />
+    <Content Include="medialibrary\images\portfolio\recent\item9.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="medialibrary\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="medialibrary\images\prettyPhoto\default\loader.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\default\sprite.png" />
+    <Content Include="medialibrary\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="medialibrary\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="medialibrary\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="medialibrary\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="medialibrary\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="medialibrary\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="medialibrary\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="medialibrary\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="medialibrary\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="medialibrary\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="medialibrary\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="medialibrary\images\ratings\rating-gree.jpg" />
+    <Content Include="medialibrary\images\ribon_one.png" />
+    <Content Include="medialibrary\images\ribon_two.png" />
+    <Content Include="medialibrary\images\search_icon.png" />
+    <Content Include="medialibrary\images\services\bg_services.jpg" />
+    <Content Include="medialibrary\images\services\bg_services.png" />
+    <Content Include="medialibrary\images\services\services1.png" />
+    <Content Include="medialibrary\images\services\services2.png" />
+    <Content Include="medialibrary\images\services\services3.png" />
+    <Content Include="medialibrary\images\services\services4.png" />
+    <Content Include="medialibrary\images\services\services5.png" />
+    <Content Include="medialibrary\images\services\services6.png" />
+    <Content Include="medialibrary\images\services\slider-bg.png" />
+    <Content Include="medialibrary\images\service\client1.png" />
+    <Content Include="medialibrary\images\service\client2.png" />
+    <Content Include="medialibrary\images\service\client3.png" />
+    <Content Include="medialibrary\images\service\image_bg.png" />
+    <Content Include="medialibrary\images\service\logo.png" />
+    <Content Include="medialibrary\images\Shopping-cart-add-icon.png" />
+    <Content Include="medialibrary\images\shopping_cart_icon.jpg" />
+    <Content Include="medialibrary\images\slider\bg1.jpg" />
+    <Content Include="medialibrary\images\slider\bg2.jpg" />
+    <Content Include="medialibrary\images\slider\bg3.jpg" />
+    <Content Include="medialibrary\images\slider\img1.png" />
+    <Content Include="medialibrary\images\slider\img2.png" />
+    <Content Include="medialibrary\images\slider\img3.png" />
+    <Content Include="medialibrary\images\slider_one.jpg" />
+    <Content Include="medialibrary\images\tab1.png" />
+    <Content Include="medialibrary\images\tab2.png" />
+    <Content Include="medialibrary\images\team-member.jpg" />
+    <Content Include="medialibrary\images\testimonials1.png" />
+    <Content Include="medialibrary\js\bootstrap.min.js" />
+    <Content Include="medialibrary\js\html5shiv.js" />
+    <Content Include="medialibrary\js\jquery.isotope.min.js" />
+    <Content Include="medialibrary\js\jquery.js" />
+    <Content Include="medialibrary\js\jquery.prettyPhoto.js" />
+    <Content Include="medialibrary\js\main.js" />
+    <Content Include="medialibrary\js\respond.min.js" />
+    <Content Include="medialibrary\js\wow.min.js" />
+    <Content Include="Views\Partials\umbAbout.cshtml" />
+    <Content Include="Views\Partials\umbFeatures.cshtml" />
+    <Content Include="Views\Partials\umbHomepageBanner.cshtml" />
+    <Content Include="Views\Partials\umbLatestNewsWidget.cshtml" />
+    <Content Include="Views\Partials\umbNewsOverviewWidget.cshtml" />
+    <Content Include="Views\Partials\umbSocial.cshtml" />
+    <Content Include="Views\Partials\umbTopNavigation.cshtml" />
+    <Content Include="Views\umbHomePage.cshtml" />
+    <Content Include="Views\umbLayout.cshtml" />
+    <Content Include="Views\umbNewsItem.cshtml" />
+    <Content Include="Views\umbNewsOverview.cshtml" />
+    <Content Include="Views\umbTextPage.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Web.config" />
+    <Content Include="medialibrary\fonts\fontawesome-webfont.eot" />
+    <Content Include="medialibrary\fonts\fontawesome-webfont.svg" />
+    <Content Include="medialibrary\fonts\fontawesome-webfont.ttf" />
+    <Content Include="medialibrary\fonts\fontawesome-webfont.woff" />
+    <Content Include="medialibrary\fonts\FontAwesome.otf" />
+    <Content Include="medialibrary\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="medialibrary\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="medialibrary\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="medialibrary\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="medialibrary\images\404.xcf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Xslt\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Views\MacroPartials\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49882/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <Assets Include="medialibrary\**\*.*" />
+       <UIItems Include="Views\*.*" />
+      <UIItems Include="Views\**\*.*" />
+      <Assemblies Include="bin\**\AffordableInterior.CMS.Web.dll" />
+      <Assemblies Include="bin\**\RoySol*.dll" />
+     <Config Include="web.config" />
+    </ItemGroup>
+    <Microsoft.Build.Tasks.Copy SourceFiles="@(Assets)" DestinationFolder="$(SolutionDir)\Website\medialibrary\%(RecursiveDir)" />
+    <Microsoft.Build.Tasks.Copy SourceFiles="@(UIItems)" DestinationFolder="$(SolutionDir)\Website\Views\%(RecursiveDir)" />
+    <Microsoft.Build.Tasks.Copy SourceFiles="@(Assemblies)" DestinationFolder="$(SolutionDir)\Website\Bin" />
+    <Microsoft.Build.Tasks.Copy SourceFiles="@(Config)" DestinationFolder="$(SolutionDir)\Website" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
